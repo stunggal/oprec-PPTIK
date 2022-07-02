@@ -1,7 +1,5 @@
 @extends('layout.main')
 @section('content')
-    </aside><!-- End Sidebar-->
-
     <main id="main" class="main">
 
         <div class="pagetitle">
