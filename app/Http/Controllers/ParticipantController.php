@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ParticipantController extends Controller
 {
+    public function createparticipant()
+    {
+        return view('participant.create');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,7 @@ class ParticipantController extends Controller
      */
     public function index()
     {
-        //
+        return view('participant.index');
     }
 
     /**
@@ -24,7 +28,7 @@ class ParticipantController extends Controller
      */
     public function create()
     {
-        //
+        return view('participant.create');
     }
 
     /**
