@@ -126,7 +126,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/event/create">
+                        <a href="createevent">
                             <i class="bi bi-circle"></i><span>Create Event</span>
                         </a>
                     </li>
@@ -145,7 +145,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="participant/create">
+                        <a href="createparticipant">
                             <i class="bi bi-circle"></i><span>Create Participant</span>
                         </a>
                     </li>
@@ -158,12 +158,12 @@
                 </a>
                 <ul id="period-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="tables-general.html">
+                        <a href="period">
                             <i class="bi bi-circle"></i><span>List of Period</span>
                         </a>
                     </li>
                     <li>
-                        <a href="tables-data.html">
+                        <a href="createperiod">
                             <i class="bi bi-circle"></i><span>Create Period</span>
                         </a>
                     </li>
@@ -176,13 +176,8 @@
                 </a>
                 <ul id="weight-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="tables-general.html">
+                        <a href="weight">
                             <i class="bi bi-circle"></i><span>List of weight</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tables-data.html">
-                            <i class="bi bi-circle"></i><span>Data Tables</span>
                         </a>
                     </li>
                 </ul>

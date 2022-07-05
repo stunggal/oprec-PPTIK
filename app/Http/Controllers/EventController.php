@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
+
+    public function createevent()
+    {
+        return view('event.create');
+    }
     /**
      * Display a listing of the resource.
      *

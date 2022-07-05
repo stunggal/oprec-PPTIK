@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class PeriodController extends Controller
 {
+
+    public function createperiod()
+    {
+        return view('period.create');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +19,7 @@ class PeriodController extends Controller
      */
     public function index()
     {
-        //
+        return view('period.index');
     }
 
     /**
