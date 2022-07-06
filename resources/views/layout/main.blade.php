@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <title>
+        {{ $title }} | open recruitment of PPTIK
+    </title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -109,14 +111,23 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="index.html">
+                <a class="nav-link 
+                @if ($title == 'Dashboard') @else
+                collapsed @endif
+                "
+                    href="/">
+
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#event-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link 
+                @if ($title == 'Event') @else
+                collapsed @endif
+                "
+                    data-bs-target="#event-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-calendar4-event"></i><span>Event</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="event-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -134,8 +145,11 @@
             </li><!-- End Tables Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#participant-nav" data-bs-toggle="collapse"
-                    href="#">
+                <a class="nav-link 
+                @if ($title == 'Participant') @else
+                collapsed @endif
+                "
+                    data-bs-target="#participant-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-people"></i><span>Participant</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="participant-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -153,7 +167,11 @@
             </li><!-- End Tables Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#period-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link 
+                @if ($title == 'Period') @else
+                collapsed @endif
+                "
+                    data-bs-target="#period-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-clock-history"></i><span>Period</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="period-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -171,7 +189,11 @@
             </li><!-- End Tables Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#weight-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link 
+                @if ($title == 'Weight') @else
+                collapsed @endif
+                "
+                    data-bs-target="#weight-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-bar-chart-line"></i><span>Weight</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="weight-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -185,8 +207,22 @@
         </ul>
     </aside><!-- End Sidebar-->
 
+    <main id="main" class="main">
 
-    @yield('content')
+        <div class="pagetitle">
+            <h1>{{ $title }}</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ $route1 }}">{{ $title }}</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ $route2 }}">{{ $section }}</a></li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+
+        @yield('content')
+
+    </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">

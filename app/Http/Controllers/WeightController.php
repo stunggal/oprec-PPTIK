@@ -14,7 +14,13 @@ class WeightController extends Controller
      */
     public function index()
     {
-        return view('weight.index');
+        return view('weight.index', [
+            'title' => 'Weight',
+            'title' => 'Weight',
+            'section' => 'Create Weight',
+            'route1' => 'weight',
+            'route2' => 'weight',
+        ]);
     }
 
     /**

@@ -2,21 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\event;
+use App\Models\keikutsertaan;
 use Illuminate\Http\Request;
 
-class EventController extends Controller
+class KeikutsertaanController extends Controller
 {
-
-    public function createevent()
-    {
-        return view('event.create', [
-            'title' => 'Event',
-            'section' => 'Create Event',
-            'route1' => 'event',
-            'route2' => 'createevent',
-        ]);
-    }
     /**
      * Display a listing of the resource.
      *
@@ -24,12 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('event.index', [
-            'title' => 'Event',
-            'section' => 'Event List',
-            'route1' => 'event',
-            'route2' => 'event',
-        ]);
+        //
     }
 
     /**
@@ -39,7 +24,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('event.create');
+        //
     }
 
     /**
@@ -56,10 +41,10 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\event  $event
+     * @param  \App\Models\keikutsertaan  $keikutsertaan
      * @return \Illuminate\Http\Response
      */
-    public function show(event $event)
+    public function show(keikutsertaan $keikutsertaan)
     {
         //
     }
@@ -67,10 +52,10 @@ class EventController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\event  $event
+     * @param  \App\Models\keikutsertaan  $keikutsertaan
      * @return \Illuminate\Http\Response
      */
-    public function edit(event $event)
+    public function edit(keikutsertaan $keikutsertaan)
     {
         //
     }
@@ -79,10 +64,10 @@ class EventController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\event  $event
+     * @param  \App\Models\keikutsertaan  $keikutsertaan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, event $event)
+    public function update(Request $request, keikutsertaan $keikutsertaan)
     {
         //
     }
@@ -90,10 +75,10 @@ class EventController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\event  $event
+     * @param  \App\Models\keikutsertaan  $keikutsertaan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(event $event)
+    public function destroy(keikutsertaan $keikutsertaan)
     {
         //
     }

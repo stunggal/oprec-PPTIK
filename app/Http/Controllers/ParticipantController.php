@@ -9,7 +9,12 @@ class ParticipantController extends Controller
 {
     public function createparticipant()
     {
-        return view('participant.create');
+        return view('participant.create', [
+            'title' => 'Participant',
+            'section' => 'Create Participant',
+            'route1' => 'participant',
+            'route2' => 'createparticipant',
+        ]);
     }
     /**
      * Display a listing of the resource.
@@ -18,7 +23,12 @@ class ParticipantController extends Controller
      */
     public function index()
     {
-        return view('participant.index');
+        return view('participant.index', [
+            'title' => 'Participant',
+            'section' => 'Participant List',
+            'route1' => 'participant',
+            'route2' => 'participant',
+        ]);
     }
 
     /**

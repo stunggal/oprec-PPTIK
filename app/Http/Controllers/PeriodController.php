@@ -10,7 +10,13 @@ class PeriodController extends Controller
 
     public function createperiod()
     {
-        return view('period.create');
+        return view('period.create', [
+            'title' => 'Period',
+            'title' => 'Period',
+            'section' => 'Create Period',
+            'route1' => 'period',
+            'route2' => 'createperiod',
+        ]);
     }
     /**
      * Display a listing of the resource.
@@ -19,7 +25,12 @@ class PeriodController extends Controller
      */
     public function index()
     {
-        return view('period.index');
+        return view('period.index', [
+            'title' => 'Period',
+            'section' => 'Period List',
+            'route1' => 'period',
+            'route2' => 'period',
+        ]);
     }
 
     /**
