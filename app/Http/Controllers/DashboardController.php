@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\dashboard;
 use Illuminate\Http\Request;
+use App\Models\Participant;
 
 class DashboardController extends Controller
 {
@@ -14,11 +15,19 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        $participants = Participant::all();
+        // selec from participant where division = 'networking'
+        $networking = Participant::where('division', 'networking')->get()->count();
+        $administration = Participant::where('division', 'administration')->get()->count();
+        $developer = Participant::where('division', 'developer')->get()->count();
         return view('dashboard.index', [
             'title' => 'Dashboard',
             'section' => '',
             'route1' => '',
             'route2' => '',
+            'networking' => $networking,
+            'administration' => $administration,
+            'developer' => $developer,
         ]);
     }
 
